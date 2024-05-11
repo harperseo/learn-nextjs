@@ -9,13 +9,11 @@ export default async function MovieDetail({
 }) {
   return (
     <div>
-      <h1>Movie</h1>
-      <Suspense fallback="loading...">
-        <MovieVideo id={id} />
-      </Suspense>
-      <h1>Video</h1>
       <Suspense fallback="loading...">
         <MovieInfo id={id} />
+      </Suspense>
+      <Suspense fallback="loading...">
+        <MovieVideo id={id} />
       </Suspense>
     </div>
   );
