@@ -1,7 +1,7 @@
 import { URL } from "../app/(home)/page";
 import styles from "../public/styles/movie-info.module.css";
 
-async function getMovie(id: string) {
+export async function getMovie(id: string) {
   console.log(`Fetching movies: ${Date.now()}`);
   const res = await fetch(`${URL}/${id}`);
   return await res.json();
